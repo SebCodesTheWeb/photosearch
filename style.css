@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Sans MS", "Helvetica";
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+body {
+    width: 100vw;
+    min-height: 100vh;
+    display: grid;
+    grid-template: 100px auto 100px / auto 200px auto;
+    grid-template-areas:
+        ". title ." 
+        "images images images"
+        ". buttons .";
+    gap: 1em;
+    background-color: #e0dac2;
+opacity: 0.8;
+background-image: radial-gradient(circle at center center, #ccd3a3, #e0dac2), repeating-radial-gradient(circle at center center, #ccd3a3, #ccd3a3, 10px, transparent 20px, transparent 10px);
+background-blend-mode: multiply;
+}
+
+
+h1, form {
+    grid-area: title;
+}
+
+.second {
+    align-self: start;
+}
+
+h1 {
+    align-self: start;
+}
+
+form {
+    align-self: end;
+}
+
+.images {
+    max-width: 90%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-area: images;
+    justify-self: center;
+    gap: 1em;
+
+}
+
+img {
+    border: dashed 3px black;
+    transition: transform cubic-bezier(1, 0, 0, 1) 0.2s;
+    border-radius: 10px;
+    align-self: end;
+}
+
+img:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+button {
+    grid-area: buttons;
+    width: 100px;
+    padding: 0.5em;
+    align-self: start;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#next {
+    justify-self: end;
+}
+
+#prev {
+    justify-self: start;
+}
+
+@media screen and (max-width: 800px) {
+    .images {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .second {
+        align-self: end;
+    }    
+}
+
+@media screen and (max-width: 500px) {
+    .images {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 350px) {
+    .images {
+        grid-template-columns: 1fr;
+    }
+}
