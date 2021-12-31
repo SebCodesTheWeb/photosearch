@@ -6,6 +6,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
     event.preventDefault();
     keyword = document.querySelector("#search").value;
     displayImages(keyword, 1)
+    document.querySelector(".images").style.visibility = "visible";
 })
 
 function displayImages(keyword, page) {

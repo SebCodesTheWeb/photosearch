@@ -49,7 +49,7 @@ form {
     grid-area: images;
     justify-self: center;
     gap: 1em;
-
+    visibility: hidden;
 }
 
 img {
