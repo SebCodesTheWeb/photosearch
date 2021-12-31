@@ -98,7 +98,7 @@ button:hover {
         grid-template-columns: 1fr 1fr;
     }
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 400px) {
     .images {
         grid-template-columns: 1fr;
     }
